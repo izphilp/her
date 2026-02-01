@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LETTERS TO YOU</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="field" aria-label="Envelope field">
+    <!-- connection lines -->
+    <!-- <svg id="links" class="links" aria-hidden="true"></svg> -->
+  </main>
+
+  <div class="hint" id="hint" aria-live="polite"></div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <section class="modal__card" role="dialog" aria-modal="true" aria-labelledby="letterTitle">
+      <header class="modal__header">
+        <h2 id="letterTitle">A Letter</h2>
+        <button class="icon-btn" id="closeBtn" aria-label="Close letter">✕</button>
+      </header>
+      <div class="spread">
+        <article class="page page--text" id="letterBody"></article>
+
+        <div class="page page--photo">
+            <img id="letterPhoto" alt="Photo memory" />
+            <div class="photoFallback" id="photoFallback">No photo yet 💗</div>
+        </div>
+        </div>
+
+      <footer class="modal__footer">
+        <button class="btn" id="nextBtn">Continue</button>
+      </footer>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
